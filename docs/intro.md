@@ -21,6 +21,11 @@ Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new
 
 Generate a new Docusaurus site using the **classic template**.
 
+This is a new line of text with what I need to see here. Says @marco
+### Important things MH
+**one two three**
+*for five six*
+
 The classic template will automatically be added to your project after you run the command:
 
 ```bash
