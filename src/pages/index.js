@@ -3,13 +3,6 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import CMS from 'netlify-cms-app';
-
-// Initialize the CMS object
-// CMS.init()
-// Now the registry is available via the CMS object.
-// CMS.registerPreviewTemplate('my-template', MyTemplate)
-
 import styles from './index.module.css';
 
 function HomepageHeader() {
