@@ -1,0 +1,57 @@
+backend:
+  name: gitlab
+  repo: repo/project
+  branch: your_branch
+  auth_type: pkce
+  app_id: <YOUR_APP_ID>
+  api_root: https://gitlab.yourdomain.com/api/v4
+  base_url: https://gitlab.yourdomain.com
+  auth_endpoint: oauth/authorize
+  accept_roles:
+    - admin
+    - editor
+
+# when using the default proxy server port (for local dev)
+local_backend: true
+
+locale: fr
+
+media_folder: "static/img"
+public_folder: "/img"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+collections:
+  - name: docs
+    label: Docs
+    label_singular: Doc
+    folder: docs
+    create: true
+    nested:
+      depth: 4 
+      summary: '{{title}}' 
+    fields:
+      - label: Sidebar position
+        name: sidebar_position
+        widget: number
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+      - label: Image
+        name: image
+        widget: 'image'
+        allow_multiple: false
+      - label: Body
+        name: body
+        widget: markdown
+    sortableFields: ["title", "sidebar_position"]
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }  
