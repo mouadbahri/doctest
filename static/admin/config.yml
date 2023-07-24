@@ -1,11 +1,11 @@
 backend:
   name: gitlab
-  repo: repo/project
-  branch: your_branch
+  repo: doctest
+  branch: master
   auth_type: pkce
-  app_id: <YOUR_APP_ID>
+  app_id: 46228049
   api_root: https://gitlab.yourdomain.com/api/v4
-  base_url: https://gitlab.yourdomain.com
+  base_url: https://gitlab.com
   auth_endpoint: oauth/authorize
   accept_roles:
     - admin
